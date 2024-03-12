@@ -1,0 +1,7 @@
+h2 {
+    background:  #ff9900;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline;
+    text-align: center;
+  }
