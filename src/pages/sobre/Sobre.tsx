@@ -3,9 +3,9 @@ import "./Sobre.css";
 
 function Sobre() {
   return (
-    <div className="bg-gray-100 container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+  <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-        <div className="text-justify max-w-lg">
+        <div className="text-justify max-w-lg bg-gray-100 rounded-lg p-6">
           <h2 className="text-center text-3xl font-extrabold text-orange-700 sm:text-4xl">
             SOBRE NÓS
           </h2>
