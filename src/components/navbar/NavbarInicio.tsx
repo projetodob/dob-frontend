@@ -25,7 +25,7 @@ function NavbarInicio() {
 
   if (usuario.token !== "") {
     navbarComponent = (
-      <div className='w-full bg-white shadow border-gray-200 dark:bg-gray-900'>
+      <div className='w-full bg-white shadow border-gray-200 dark:bg-white'>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to='/home' className='hover:rounded-full px-1 py-1 text-2xl font-bold uppercase ml-10'>Desenvolvendo o Bem</Link>
 
