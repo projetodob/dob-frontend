@@ -14,9 +14,7 @@ function Login() {
     {} as UsuarioLogin
   );
 
-  const { usuario, handleLogin } = useContext(AuthContext);
-
-  const {isLoading} = useContext(AuthContext) 
+  const { usuario, handleLogin, isLoading } = useContext(AuthContext);
 
   useEffect(() => {
     if (usuario.token !== "") {
@@ -40,9 +38,9 @@ function login(e: ChangeEvent<HTMLFormElement>) {
     <>
       <div className="h-screen font-sans fundoLogin bg-cover bg-center bg-no-repeat flex flex-1 justify-center items-center">
         <form className="max-w-xl m-4 p-24 bg-white bg-opacity-25 rounded shadow-xl" onSubmit={login}>
-          <h2 className="text-white font-medium text-center text-5xl font-bold ">LOGIN</h2>
+          <h2 className="text-verdeEsc text-center text-5xl font-bold ">LOGIN</h2>
           <div className="">
-            <label className='mt-16 block font-medium text-lg text-white' htmlFor="usuario">Usuário</label>
+            <label className='mt-16 block font-medium text-lg text-verdeEsc' htmlFor="usuario">Usuário</label>
             <input
               type="text"
               id="usuario"
@@ -54,7 +52,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label className='mt-4 block font-medium text-lg text-white' htmlFor="senha">Senha</label>
+            <label className='mt-4 block font-medium text-lg text-verdeEsc' htmlFor="senha">Senha</label>
             <input
               type="password"
               id="senha"

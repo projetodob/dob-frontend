@@ -51,7 +51,7 @@ function ListaCategorias() {
     buscarCategorias();
   }, [categorias.length]);
   return (
-    <div className='bg-verdeEsc h-[100%]'>
+    <div className='h-screen'>
     <>
       {categorias.length === 0 ? (
         <div className="text-center">
@@ -67,13 +67,13 @@ function ListaCategorias() {
           />
         </div>
       ) : (
-        <div className="flex justify-between w-[90%] p-4">
+        <div className=" w-[90%] mt-8 p-2">
           
           <h1 className='text-laranja text-4xl ml-40'>Categorias</h1>
 
           {isRoot && (
-            <Link to={`/cadastroCategoria/`} className='w-[20%] h-12 text-slate-100 bg-laranja hover:bg-laranjaEsc flex items-center justify-center rounded-xl'>
-              <button>Cadastrar nova categoria</button>
+            <Link to={`/cadastroCategoria/`} className='w-[15%] ml-36 h-10 text-slate-100 bg-laranja hover:bg-laranjaEsc flex items-center justify-center rounded-xl'>
+              <button className='font-bold text-1xl'>+ nova categoria</button>
             </Link>
           )}
         </div>

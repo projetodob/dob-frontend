@@ -65,8 +65,8 @@ function DeletarCategoria() {
         retornar()
     }
     return (
-        <div className="h-screen bg-verdeEsc flex flex-col justify-center items-center">
-            <div className='mb-5'>
+        <div className="flex flex-col justify-center items-center">
+            <div className='mb-5 my-8'>
                 <h1 className='text-4xl text-laranja'>DELETAR CATEGORIA</h1>
             </div>
             <div className="w-[50%] text-gray-300 rounded-t shadow-lg overflow-hidden text-xs">
