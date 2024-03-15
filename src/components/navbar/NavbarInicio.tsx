@@ -22,9 +22,11 @@ function NavbarInicio() {
 
      if(usuario.token !== "") {
       navbarComponent = (
-      <div className='w-full bg-white border-gray-200 dark:bg-gray-900'>
+      <div className='w-full bg-black border-gray-200 dark:bg-white'>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to='/home' className='text-2xl logodob font-bold uppercase ml-10'></Link>
+          <Link to='/home' className='ml-10'>
+          <img src='./assets/logodobLaranja.png' alt='Logo do Site' className='doblogo' />
+          </Link>
 
           <div className='flex gap-4'>
             <Link to='/sobre' className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Quem somos</Link>
