@@ -8,9 +8,9 @@ interface CardProdutosProps {
 function CardProduto({ prod, adicionarAoCarrinho }: CardProdutosProps) {
 
   return (
-    <div className="max-w-sm bg-white mb-7 rounded-lg shadow dark:bg-white dark:border-gray-700 transition duration-300 ease-in-out transform hover:scale-105 hover:border-orange-500 hover:text-gray-600">
-      <div className="flex w-full bg-orange-400 py-2 px-4 items-center gap-4">
-        <img src={prod.usuario?.foto} className='h-12 rounded-full' alt="" />
+    <div className="max-w-sm bg-white mb-7 rounded-lg shadow dark:bg-white dark:border-black-700 transition duration-300 ease-in-out transform hover:scale-105 hover:text-black-600">
+      <div className="flex w-full bg-laranja py-2 px-4 items-center gap-4">
+        <img src={prod.usuario?.foto} className='w-12 h-12 rounded-full' alt="" />
         <h3 className='text-lg font-bold text-center uppercase '>{prod.usuario?.nome}</h3>
       </div>
       <a href="#">

@@ -22,7 +22,7 @@ function CardCarrinho({ produto }) {
     };
 
     return (
-        <div className="bg-gray-100">
+        <div>
 
             <div className="mx-auto max-w-6xl md:flex md:space-x-6 ">
 

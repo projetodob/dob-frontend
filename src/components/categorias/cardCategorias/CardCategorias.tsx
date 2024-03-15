@@ -33,7 +33,7 @@ function CardCategorias({ categoria }: CardCategoriaProps) {
   }
 
   return (
-    <div className="relative group h-38 flex flex-col rounded-xl bg-verdeMusgo bg-clip-border text-white shadow-md">
+    <div className="relative group h-38 flex flex-col rounded-xl bg-verdeEsc bg-clip-border text-white shadow-md">
       <a href="#" className="block">
         <div className="h-28">
           <div
