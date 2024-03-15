@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { ThreeDots } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
@@ -9,7 +9,6 @@ import CardProdutoPerfil from '../cardProdutos/NovoCardProduto';
 
 function ListaProdutoPerfil() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
-
 
   const navigate = useNavigate();
 
@@ -45,16 +44,18 @@ function ListaProdutoPerfil() {
   return (
     <>
       {produtos.length === 0 && (
-        <Dna
-          visible={true}
-          height="200"
-          width="200"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
-        />
+        <ThreeDots
+        visible={true}
+        height="200"
+        width="200"
+        color="#7EAB88"
+        radius="9"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{ display: 'inline-block' }}
+        wrapperClass="mx-auto"
+      />
       )}
-      <div className='m-6 mt-20 container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+      <div className='m-6 mt-10 container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (
           <CardProdutoPerfil key={produto.id} prod={produto} usuario={usuario}/>
         ))}
