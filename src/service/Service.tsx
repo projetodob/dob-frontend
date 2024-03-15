@@ -21,7 +21,10 @@ export const buscar = async(url: string, setDados: Function, header: Object) => 
   const resposta = await api.get(url, header)
   setDados(resposta.data)
 }
-
+export const buscarDeslogado = async(url: string, setDados: Function) => {
+  const resposta = await api.get(url)
+  setDados(resposta.data)
+}
 // eslint-disable-next-line @typescript-eslint/ban-types
 export const cadastrar = async(url: string, dados: Object, setDados: Function, header: Object) => {
   const resposta = await api.post(url, dados, header)

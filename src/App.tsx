@@ -19,6 +19,7 @@ import DeletarProduto from "./components/produtos/deletarProduto/deletarProduto"
 import Perfil from "./pages/perfil/Perfil";
 import Carrinho from "./components/carrinho/Carrinho";
 import { CarrinhoProvider } from "./contexts/CarrinhoContext";
+import HomeDeslogado from "./pages/home/HomeDeslogado";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           <NavbarInicio />
           <div className='min-h-[80vh]'>
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<HomeDeslogado />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
