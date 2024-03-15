@@ -47,9 +47,6 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex justify-around gap-4 ml-20">
-              <ModalProduto />
-            </div>
           </div>
           <div
             className=" flex items-center
@@ -71,6 +68,9 @@ function Home() {
         <br />
         <ListaProdutos />
       </div>
+      <div className="flex justify-around gap-4 ml-20">
+              <ModalProduto />
+            </div>
     </>
   );
 }

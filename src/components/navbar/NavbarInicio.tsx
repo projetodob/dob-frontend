@@ -1,13 +1,13 @@
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 import { toastAlerta } from '../../util/toastAlerta'
-import './doblogo.css'
+import './doblogo.css';
+
 function NavbarInicio() {
 
   const navigate = useNavigate()
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { usuario, handleLogout } = useContext(AuthContext)
 
   function logout() {
@@ -16,39 +16,30 @@ function NavbarInicio() {
     navigate("/login")
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  let navbarComponent
+  let navbarComponent;
 
-
-     if(usuario.token !== "") {
-      navbarComponent = (
-      <div className='w-full bg-black border-gray-200 dark:bg-white'>
+  if (usuario.token !== "") {
+    navbarComponent = (
+      <div className='w-full h-[4rem] bg-white shadow border-gray-200 dark:bg-white'>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to='/home' className='ml-10'>
-          <img src='./assets/logodobLaranja.png' alt='Logo do Site' className='doblogo' />
-          </Link>
+          <Link to='/home' className='hover:rounded-full px-1 py-1 text-2xl font-bold uppercase ml-10'>Desenvolvendo o Bem</Link>
 
           <div className='flex gap-4'>
-            <Link to='/sobre' className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Quem somos</Link>
-            <Link to='/produtos' className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Produtos</Link>
-            <Link to='/categorias' className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Categorias</Link>
-            <Link to='/cadastroCategoria' className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Cadastrar categoria</Link>
-            <Link to='/contato' className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Contato</Link>
-            <Link to='/perfil' className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Perfil</Link>
-            <Link to='' onClick={logout} className='hover:bg-green-500 hover:rounded-full px-2 py-2'>Sair</Link>
+            <Link to='/sobre' className='py-2 px-2 hover:border-b-2 hover:border-green-500 hover:font-bold'>Quem somos</Link>
+            <Link to='/produtos' className='py-2 px-2 hover:border-b-2 hover:border-green-500 hover:font-bold'>Produtos</Link>
+            <Link to='/contato' className='py-2 px-2 hover:border-b-2 hover:border-green-500 hover:font-bold'>Contato</Link>
+            <Link to='/perfil' className='py-2 px-2 hover:border-b-2 hover:border-green-500 hover:font-bold'>Perfil</Link>
+            <Link to='' onClick={logout} className='py-2 px-2 hover:border-b-2 hover:border-green-500 hover:font-bold'>Sair</Link>
           </div>
         </div>
       </div>
-    
-  )
+    );
+  }
+
+  return (
+    <>
+      {navbarComponent}
+    </>
+  );
 }
-
-
-return (
-  <>
-    {navbarComponent}
-  </>
-)
-}
-
-export default NavbarInicio
+export default NavbarInicio;

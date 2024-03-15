@@ -1,15 +1,15 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { ThreeDots } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../service/Service';
 import { toastAlerta } from '../../../util/toastAlerta';
-import CardProdutoPerfil from '../cardProdutos/NovoCardProduto';
+import CardProdutoPerfil from '../cardProdutos/CardProdutoPerfil';
 
 function ListaProdutoPerfil() {
-  const [produtos, setProdutos] = useState<Produto[]>([]);
 
+  const [produtos, setProdutos] = useState<Produto[]>([]);
 
   const navigate = useNavigate();
 
@@ -30,7 +30,6 @@ function ListaProdutoPerfil() {
           Authorization: token,
         },
       });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       if (error.toString().includes('403')) {
         toastAlerta('O token expirou, favor logar novamente', 'info')
@@ -42,22 +41,31 @@ function ListaProdutoPerfil() {
   useEffect(() => {
     buscarProdutos();
   }, [produtos.length]);
+
   return (
     <>
       {produtos.length === 0 && (
-        <Dna
+        <div className="text-center">
+        <ThreeDots
           visible={true}
           height="200"
           width="200"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
+          color="#7EAB88"
+          radius="9"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{ display: 'inline-block' }}
+          wrapperClass="mx-auto"
         />
+        </div>
       )}
-      <div className='m-6 mt-20 container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {produtos.map((produto) => (
-          <CardProdutoPerfil key={produto.id} prod={produto} usuario={usuario}/>
-        ))}
+      <div className="h-screen w-full flex flex-col px-3 lg:px-10">
+        <div className="w-full flex justify-center items-center">
+          <div className="grid grid-cols-5 gap-3 py-10">
+            {produtos.map((produto) => (
+              <CardProdutoPerfil key={produto.id} prod={produto} usuario={usuario} />
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );

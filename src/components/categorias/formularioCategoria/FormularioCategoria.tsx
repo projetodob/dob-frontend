@@ -95,12 +95,12 @@ function FormularioCategoria() {
   useEffect(() => {
     if (token === '') {
       toastAlerta('Você precisa estar logado', 'info');
-      navigate('/login');;
+      navigate('/login');
     }
   }, [token]);
 
   return (
-    <div className="bg-verdeEsc h-screen flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
 
       <h1 className="text-4xl text-laranja text-center my-8">
         {id === undefined ? 'Cadastrar uma nova categoria' : 'Editar categoria'}

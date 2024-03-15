@@ -1,9 +1,11 @@
 import { useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
-import { toastAlerta } from '../../util/toastAlerta'
-
+import { toastAlerta } from '../../util/toastAlerta';
 import ListaProdutoPerfil from '../../components/produtos/listaProdutos/ListaProdutoPerfil';
+import carrinho from "../../assets/carrinho.png";
+import categoria from "../../assets/categoria.png";
+
 
 function Perfil() {
 
@@ -18,23 +20,50 @@ function Perfil() {
         }
     }, [usuario.token]);
 
+    let imagemCarrinho: string;
+    imagemCarrinho = carrinho;
+
+    let imagemCategoria: string;
+    imagemCategoria = categoria;
+
     return (
-        <div className='container mx-auto mt-4 rounded-2xl overflow-hidden'>
-            <div className='w-full h-72 bg-orange-300 border-b-8'></div>
-            <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' />
-            <div className="mb-10 relative mt-[-6rem] mb-[-5rem] h-72 flex flex-col bg-green-500 text-white text-2xl items-center justify-center">
-                <p>Nome: {usuario.nome} </p>
-                <p>Email: {usuario.email}</p>
+        <div>
+
+            <div className='flex justify-between h-48 bg-laranja'>
+                <div className='flex'>
+                    <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='ml-12 mt-4 h-40 w-40 rounded-full' />
+                    <div className='ml-5 flex flex-col justify-center items-center'>
+                        <p className='text-white font-bold text-3xl'>{usuario.nome}</p>
+                        <p className='text-white text-1xl'>{usuario.email}</p>
+                    </div>
+                </div>
+                <div className='flex flex-col items-center justify-center mb-5'>
+                    <Link to='/carrinho' className='mr-5 mt-5'>
+                        <img
+                            src={imagemCarrinho}
+                            alt="carrinho"
+                            loading="lazy"
+                            width="30"
+                            height="30"
+                        />
+                    </Link>
+                    <Link to='/categorias' className='mr-5 mt-5'>
+                        <img
+                            src={imagemCategoria}
+                            alt="carrinho"
+                            loading="lazy"
+                            width="30"
+                            height="30"
+                        />
+                    </Link>
+                </div>
             </div>
 
-            <div className='mb-5 text-orange-600 font-bold text-3xl'>
+            <div className='mt-5 px-10 text-orange-600 font-bold text-3xl'>
                 <p>Seus produtos</p>
             </div>
-            
             <ListaProdutoPerfil />
         </div>
-
-
     );
 }
 

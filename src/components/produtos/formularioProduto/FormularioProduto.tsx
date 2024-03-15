@@ -6,6 +6,7 @@ import Categoria from '../../../models/Categoria';
 import { buscar, atualizar, cadastrar } from '../../../service/Service';
 import { toastAlerta } from '../../../util/toastAlerta';
 
+
 function FormularioProduto() {
   const navigate = useNavigate();
 
@@ -30,6 +31,29 @@ function FormularioProduto() {
     categoria: null,
     usuario: null,
   });
+    
+  const LimiteDescricao = 120;
+
+  const atualizarDescricao = (e: ChangeEvent<HTMLInputElement>) => {
+    const novaDescricao = e.target.value.slice(0, LimiteDescricao); // Limita a descrição ao limite de caracteres
+    if (novaDescricao.length >= produto.descricao.length || novaDescricao.length === 0) {
+      setProduto({ ...produto, descricao: novaDescricao });
+    }
+  };
+
+  const contarCaracteresRestantes = () => {
+    const restantes = LimiteDescricao - produto.descricao.length;
+    return restantes >= 0 ? restantes : 0;
+  };
+
+  const estiloCaracteresRestantes = () => {
+    if (contarCaracteresRestantes() <= 50) {
+      return "text-red-500"; // Se restarem 50 caracteres ou menos, use a cor vermelha
+    } else {
+      return "text-green-500"; // Caso contrário, use a cor verde
+    }
+  };
+
 
   async function buscarProdutoPorId(id: string) {
     await buscar(`/produtos/${id}`, setProduto, {
@@ -141,6 +165,7 @@ function FormularioProduto() {
   }
 
   const carregandoCategoria = categoria.tipo === '';
+  
 
   return (
     <div className="container flex flex-col mx-auto items-center">
@@ -170,6 +195,7 @@ function FormularioProduto() {
             required
             className="border-2 border-slate-700 rounded p-2"
           />
+           <p className={estiloCaracteresRestantes()}>Caracteres restantes: {contarCaracteresRestantes()}</p>
         </div>
         <div className="flex flex-col gap-2">
           <label htmlFor="preco">Preço em R$</label>
