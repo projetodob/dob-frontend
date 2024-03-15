@@ -38,7 +38,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
     <>
       <div className="h-screen font-sans fundoLogin bg-cover bg-center bg-no-repeat flex flex-1 justify-center items-center">
         <form className="max-w-xl m-4 p-24 bg-white bg-opacity-25 rounded shadow-xl" onSubmit={login}>
-          <h2 className="text-verdeEsc font-medium text-center text-5xl font-bold ">LOGIN</h2>
+          <h2 className="text-verdeEsc text-center text-5xl font-bold ">LOGIN</h2>
           <div className="">
             <label className='mt-16 block font-medium text-lg text-verdeEsc' htmlFor="usuario">Usuário</label>
             <input
