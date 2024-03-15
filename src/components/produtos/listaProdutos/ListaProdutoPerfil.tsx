@@ -5,7 +5,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../service/Service';
 import { toastAlerta } from '../../../util/toastAlerta';
-import CardProdutoPerfil from '../cardProdutos/NovoCardProduto';
+import CardProdutoPerfil from '../cardProdutos/CardProdutoPerfil';
 
 function ListaProdutoPerfil() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
