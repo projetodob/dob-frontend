@@ -11,7 +11,7 @@ function HomeDeslogado() {
   return (
     <>
       <div className="w-screen">
-        <div className="pt-10 bg-gradient-to-b from-orange-100 to-orange-600 pb-32 grid items-center justify-items-center grid-cols-3  md:grid-cols-3">
+        <div className="pt-10 bg-gradient-to-b  pb-32 grid items-center justify-items-center grid-cols-3  md:grid-cols-3">
           
             <div className="grid grid-cols-3 col-span-2 w-full">
               <div className="grid items-center justify-items-center col-span-2">
@@ -38,8 +38,8 @@ function HomeDeslogado() {
             
         </div>
 
-    <div className=" pb-20 grid  bg-gradient-to-b from-orange-600 to-orange-800 justify-items-center overflow-hidden  bg-orange-700">
-      <div className="flex gap-20 flex-wrap text-center">
+    <div className=" pb-20 grid  bg-gradient-to-b from-orange-500 to-orange-800 items-center justify-items-center overflow-hidden  bg-orange-700">
+      <div className="flex gap-20 flex-wrap items-centers text-center">
        <div className="  w-full h-80 md:w-60  rounded shadow-lg hover:bg-orange-800  ">  
        <a href="/login">   
               <div className="grid grid-rows-4 py-4 h-full ">
