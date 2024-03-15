@@ -4,11 +4,11 @@ import CardCarrinho from './CardCarrinho';
 
 function Carrinho() {
     
-    const { carrinho } = useContext(CarrinhoContext);
+    const { carrinho,  } = useContext(CarrinhoContext);
 
     return (
-        <div className="h-screen bg-gray-100 pt-10">
-            <h1 className="mb-5 text-center text-2xl font-bold">ITENS DO CARRINHO</h1>
+        <div className="bg-gray-100 pt-6">
+            <h1 className="mb-5 ml-28 text-3xl font-bold">CARRINHO</h1>
             {carrinho.map((produto) => (
                 <CardCarrinho key={produto.id} produto={produto} />
             ))}
