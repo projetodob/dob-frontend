@@ -17,6 +17,7 @@ import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
 import FormularioProduto from "./components/produtos/formularioProduto/FormularioProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/deletarProduto";
 import Perfil from "./pages/perfil/Perfil";
+import HomeDeslogado from "./pages/home/HomeDeslogado";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <NavbarInicio />
         <div className='min-h-[80vh]'>
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<HomeDeslogado />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/home" element={<Home />} />

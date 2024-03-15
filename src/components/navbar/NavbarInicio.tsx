@@ -40,7 +40,24 @@ function NavbarInicio() {
     
   )
 }
+else{
+  navbarComponent = (
+    <div className=' w-full  bg-laranjaEsc   border-gray-200 dark:bg-gray-900'>
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link to='/' className='text-4xl logodob font-bold uppercase ml-10'>aaa</Link>
+      
 
+        <div className='flex gap-4 justify-items-end'>
+          <a href='#sobre' className='bg-transparent rounded-full hover:bg-orange-600 hover:rounded-full px-2 py-2'>Quem somos</a>
+          <Link to='/login' className='hover:bg-orange-600 hover:rounded-full px-2 py-2'>Login</Link>
+          <Link to='/cadastro' className='hover:bg-orange-600 hover:rounded-full px-2 py-2'>Cadastre-se</Link>
+        </div>
+        </div>
+    </div>
+  
+)
+          
+}
 
 return (
   <>

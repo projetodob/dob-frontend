@@ -76,7 +76,7 @@ function Cadastro() {
   return (
     <>
       <div className="h-screen font-sans fundoCadastro bg-cover bg-center bg-no-repeat flex flex-1 justify-center items-center">
-        <form className='max-w-xl m-4 p-24 bg-white bg-opacity-25 rounded shadow-xl' onSubmit={cadastrarNovoUsuario}>
+        <form className='max-w-xl m-4 pt-8 pb-8 pl-12 pr-12 bg-white bg-opacity-25 rounded shadow-xl' onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-white font-medium text-center text-5xl font-bold '>Cadastrar</h2>
           <div className=" flex flex-col w-full">
             <label className='mt-16 block font-medium text-lg text-white' htmlFor="nome">Nome</label>
