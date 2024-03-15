@@ -27,24 +27,24 @@ function Perfil() {
     imagemCategoria = categoria;
 
     return (
-        <div className='container mx-auto mt-4 rounded-2xl overflow-hidden'>
+        <div>
 
-            <div className='flex justify-between items-center w-full h-72 bg-verde bg-opacity-50 rounded-xl'>
-                <div className='flex w-[50%] h-72'>
-                    <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='ml-3 mt-4 rounded-xl h-[90%] w-[40%]' />
-                    <div className='h-72 ml-3 flex flex-col justify-center'>
-                        <p className='text-black font-bold text-3xl'>{usuario.nome} </p>
-                        <p className='text-gray-600 font-bold text-1xl'>{usuario.email}</p>
+            <div className='flex justify-between h-48 bg-laranja'>
+                <div className='flex'>
+                    <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='ml-12 mt-4 h-40 w-40 rounded-full' />
+                    <div className='ml-5 flex flex-col justify-center items-center'>
+                        <p className='text-white font-bold text-3xl'>{usuario.nome}</p>
+                        <p className='text-white text-1xl'>{usuario.email}</p>
                     </div>
                 </div>
-                <div className='flex flex-col h-[50%]'>
+                <div className='flex flex-col items-center justify-center mb-5'>
                     <Link to='/carrinho' className='mr-5 mt-5'>
                         <img
                             src={imagemCarrinho}
                             alt="carrinho"
                             loading="lazy"
-                            width="50"
-                            height="50"
+                            width="30"
+                            height="30"
                         />
                     </Link>
                     <Link to='/categorias' className='mr-5 mt-5'>
@@ -52,18 +52,17 @@ function Perfil() {
                             src={imagemCategoria}
                             alt="carrinho"
                             loading="lazy"
-                            width="50"
-                            height="50"
+                            width="30"
+                            height="30"
                         />
                     </Link>
                 </div>
             </div>
 
-            <div className='mt-5 text-orange-600 font-bold text-3xl'>
+            <div className='mt-5 px-10 text-orange-600 font-bold text-3xl'>
                 <p>Seus produtos</p>
             </div>
             <ListaProdutoPerfil />
-
         </div>
     );
 }
