@@ -68,7 +68,7 @@ function Home() {
         <br />
         <ListaProdutos />
       </div>
-      <div className="flex justify-around gap-4 ml-20">
+      <div className="mb-7 flex justify-around gap-4 ml-20">
               <ModalProduto />
             </div>
     </>

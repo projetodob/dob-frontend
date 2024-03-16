@@ -32,7 +32,7 @@ function FormularioProduto() {
     usuario: null,
   });
     
-  const LimiteDescricao = 120;
+  const LimiteDescricao = 60;
 
   const atualizarDescricao = (e: ChangeEvent<HTMLInputElement>) => {
     const novaDescricao = e.target.value.slice(0, LimiteDescricao); // Limita a descrição ao limite de caracteres
