@@ -1,51 +1,169 @@
 import DOB from "../../assets/DOB.png";
+import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
 
 function Contato() {
 
-  const handleButtonClick = () => {
-    window.open('https://github.com/projetodob');
-  };
-
   return (
-    <div>
 
-      <div className="flex min-h-[30rem] items-center justify-center">
-        <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-          <div className="relative ml-5 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
-            <img
-              src={DOB}
-              alt="image"
-              className="h-full w-full object-cover"
-            />
+    <div className="flex flex-col w-full h-screen mx-auto bg-slate-100">
+
+      <div className="mt-20 mb-10 text-center text-3xl font-bold text-orange-800 sm:text-4xl">
+        <p>ENTRE EM CONTATO COM OS DESENVOLVEDORES DO DOB</p>
+      </div>
+
+      <div id="container" className="w-[90%] mx-auto">
+        <div className="flex flex-col sm:flex-row">
+
+          <div className="sm:w-1/4 p-2">
+            <div className="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
+              <div className="mb-3">
+                <img
+                  className="w-auto mx-auto rounded-full"
+                  src="https://avatars.githubusercontent.com/u/137649567?v=4"
+                  alt=""
+                />
+              </div>
+              <h2 className="text-xl font-medium text-gray-700">Eduardo Freitas</h2>
+              <span className="block mb-5"></span>
+              <div className="flex justify-center">
+                <a href="https://github.com/EduFreitas2">
+                  <GithubLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/eduardo-freitas-do-nascimento/">
+                  <LinkedinLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col items-center justify-center p-6">
-            <h4 className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-              SEJA PARCEIRO DESSA CAUSA
-            </h4>
-            <p className="mt-5 mb-5 block font-sans text-base text-justify font-normal leading-relaxed text-gray-700 antialiased">
-              Se você deseja saber mais detalhes sobre o projeto ou contribuir, convidamos você a explorar nosso repositório no Github,
-              onde compartilhamos informações detalhadas e o código-fonte. Caso prefira um contato direto, sinta-se à vontade para nos enviar uma mensagem por email.
-            </p>
-            <div className="flex">
-              <a
-                href="mailto:projetointegradordob@gmail.com"
-                className="text-lg mb-2 font-bold bg-orange-500 text-white py-2 px-4 rounded transform hover:scale-110 motion-reduce:transform-none mr-5"
-                type="button">
-                Email
-              </a>
-              <button
-                onClick={handleButtonClick}
-                className="text-lg mb-2 font-bold bg-orange-500 text-white py-2 px-4 rounded transform hover:scale-110 motion-reduce:transform-none"
-              >
-                Github
-              </button>
+
+
+          <div className="sm:w-1/4 p-2">
+            <div className="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
+              <div className="mb-3">
+                <img
+                  className="w-auto mx-auto rounded-full"
+                  src="https://avatars.githubusercontent.com/u/151969059?v=4"
+                  alt=""
+                />
+              </div>
+              <h2 className="text-xl font-medium text-gray-700">Gustavo Almeida</h2>
+              <span className="block mb-5"></span>
+              <div className="flex justify-center">
+                <a href="https://github.com/gustavokarl">
+                  <GithubLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/gustavokarl/">
+                  <LinkedinLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="sm:w-1/4 p-2">
+            <div className="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
+              <div className="mb-3">
+                <img
+                  className="w-auto mx-auto rounded-full"
+                  src="https://avatars.githubusercontent.com/u/129013545?v=4"
+                  alt=""
+                />
+              </div>
+              <h2 className="text-xl font-medium text-gray-700">Leticia Rocha</h2>
+              <span className="block mb-5"></span>
+              <div className="flex justify-center">
+                <a href="https://github.com/letssrockit">
+                  <GithubLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+                <a href="http://www.linkedin.com/in/leticiasrocha">
+                  <LinkedinLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:w-1/4 p-2">
+            <div className="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
+              <div className="mb-3">
+                <img
+                  className="w-auto mx-auto rounded-full"
+                  src="https://avatars.githubusercontent.com/u/113372101?v=4"
+                  alt=""
+                />
+              </div>
+              <h2 className="text-xl font-medium text-gray-700">Verônica Freitas</h2>
+              <span className="block mb-5"></span>
+              <div className="flex justify-center">
+                <a href="https://github.com/verofreitt">
+                  <GithubLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/verofreitt/">
+                  <LinkedinLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="sm:w-1/4 p-2">
+            <div className="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
+              <div className="mb-3">
+                <img
+                  className="w-auto mx-auto rounded-full"
+                  src="https://avatars.githubusercontent.com/u/134935809?v=4"
+                  alt=""
+                />
+              </div>
+              <h2 className="text-xl font-medium text-gray-700">Vitória Helena</h2>
+              <span className="block mb-5"></span>
+              <div className="flex justify-center">
+                <a href="https://github.com/VitoriaH1611">
+                  <GithubLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/vit%C3%B3ria-helena-webdeveloper55778/">
+                  <LinkedinLogo
+                    size={45}
+                    weight='light'
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+
 
     </div>
   );
 };
 
 export default Contato;
+
