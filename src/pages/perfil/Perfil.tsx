@@ -59,7 +59,7 @@ function Perfil() {
                 </div>
             </div>
 
-            <div className='mt-5 px-10 text-orange-600 font-bold text-3xl'>
+            <div className='mt-5 ml-10 px-10 text-laranjaEsc font-bold text-3xl'>
                 <p>Seus produtos</p>
             </div>
             <ListaProdutoPerfil />

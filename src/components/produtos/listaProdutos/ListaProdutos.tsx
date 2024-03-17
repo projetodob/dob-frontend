@@ -52,20 +52,20 @@ function ListaProdutos() {
   return (
     <>
       {produtos.length === 0 && (
-         <div className="text-center">
-         <ThreeDots
-           visible={true}
-           height="200"
-           width="200"
-           color="#7EAB88"
-           radius="9"
-           ariaLabel="three-dots-loading"
-           wrapperStyle={{ display: 'inline-block' }}
-           wrapperClass="mx-auto"
-         />
-       </div>
+        <div className="text-center">
+          <ThreeDots
+            visible={true}
+            height="200"
+            width="200"
+            color="#7EAB88"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{ display: 'inline-block' }}
+            wrapperClass="mx-auto"
+          />
+        </div>
       )}
-      <div className='mt-8 container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+      <div className='mt-5 container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (
           <CardProduto key={produto.id} prod={produto} adicionarAoCarrinho={adicionarAoCarrinho} />
         ))}
@@ -118,18 +118,18 @@ function DeslogadoListaProdutos() {
   return (
     <>
       {produtos.length === 0 && (
-         <div className="text-center">
-         <ThreeDots
-           visible={true}
-           height="200"
-           width="200"
-           color="#7EAB88"
-           radius="9"
-           ariaLabel="three-dots-loading"
-           wrapperStyle={{ display: 'inline-block' }}
-           wrapperClass="mx-auto"
-         />
-       </div>
+        <div className="text-center">
+          <ThreeDots
+            visible={true}
+            height="200"
+            width="200"
+            color="#7EAB88"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{ display: 'inline-block' }}
+            wrapperClass="mx-auto"
+          />
+        </div>
       )}
       <div className='mt-8 container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (

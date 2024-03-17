@@ -1,77 +1,37 @@
-import dob from "../../assets/DOB.png";
-import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos";
-import ModalProduto from "../../components/produtos/modalProduto/ModalProduto";
-
 import "./Home.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import InfosHome from "./InfosHome";
+import ListaProdutosHome from "../../components/produtos/listaProdutos/ListaProdutoHome";
 
 function Home() {
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    cssEase: "linear"
+  };
+
   return (
     <>
-      <div>
-        <div
-          className="grid grid-cols-2
-            pt-20
-            pb-20
-            items-center
-            justify-center"
-        >
-          <div
-            className="flex flex-col 
-                items-center
-                justify-center
-                space-y-10"
-          >
-            <div className="ml-20 mx-auto text-center">
-              <div>
-                <h2 className="text-orange-500 text-2xl font-bold">Comércio Justo!</h2>
-                <p>
-                  O "Desenvolvendo o Bem - DOB" é um projeto inovador voltado para a
-                  erradicação da pobreza, alinhado ao Objetivo de Desenvolvimento
-                  Sustentável 1 da ONU (ODS 1): Erradicação da Pobreza.
-                </p>
-              </div>
-              <br></br>
-              <div>
-                <h2 className="text-orange-600 text-2xl font-bold">Oportunidades de Negócios!</h2>
-                <p>
-                  Queremos proporcionar oportunidades econômicas sustentáveis,
-                  incentivando o empreendedorismo em comunidades carentes.
-                </p>
-              </div>
-              <br />
-              <div>
-                <h2 className="text-orange-700 text-2xl font-bold">Sustentabilidade Econômica!</h2>
-                <p>
-                  Proporcionar uma fonte de renda sustentável para empreendedores
-                  locais é a nossa missão.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className=" flex items-center
-                justify-center"
-          >
-            <div className=" ">
-              <img
-                src={dob}
-                alt=""
-                className="size-102 
-                                                        pr-0"
-              />
-            </div>
-          </div>
+
+      <Slider {...settings}>
+        <div>
+          <InfosHome />
         </div>
         <div>
-          <p className=" text-center font-extrabold text-orange-700 text-3xl">VENHA CONFERIR NOSSOS PRODUTOS</p>
+          <ListaProdutosHome />
         </div>
-        <br />
-        <ListaProdutos />
-      </div>
-      <div className="mb-7 flex justify-around gap-4 ml-20">
-              <ModalProduto />
-            </div>
+      </Slider>
+
     </>
   );
-}
+};
+
 export default Home;
