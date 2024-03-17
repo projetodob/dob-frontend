@@ -7,6 +7,7 @@ import { buscar, buscarDeslogado} from '../../../service/Service';
 import CardProduto from '../cardProdutos/CardProdutos';
 import { toastAlerta } from '../../../util/toastAlerta';
 import { CarrinhoContext } from '../../../contexts/CarrinhoContext';
+import CardProdutoHomeDeslogado from '../cardProdutos/CardProdutoHomeDeslogado';
 
 function DeslogadoProdutos() {
 
@@ -15,10 +16,7 @@ function DeslogadoProdutos() {
 
     const { adicionarProdutoAoCarrinho } = useContext(CarrinhoContext);
   
-    const navigate = useNavigate();
-  
-    const { usuario, handleLogout } = useContext(AuthContext);
-    const token = usuario.token;
+
     async function buscarProdutos() {
       try {
         await buscarDeslogado('/produtos', setProdutos, 
@@ -26,7 +24,6 @@ function DeslogadoProdutos() {
       } catch (error: any) {
         if (error.toString().includes('403')) {
           toastAlerta('O token expirou, favor logar novamente', 'info')
-          handleLogout()
         }
       }
     }
@@ -35,9 +32,6 @@ function DeslogadoProdutos() {
       buscarProdutos();
     }, [produtos.length]);
   
-    function adicionarAoCarrinho(produto: Produto) {
-      adicionarProdutoAoCarrinho(produto);
-    }
   
     return (
       <>
@@ -57,7 +51,7 @@ function DeslogadoProdutos() {
         )}
         <div className='mt-8 container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           {produtos.map((produto) => (
-            <CardProduto key={produto.id} prod={produto} adicionarAoCarrinho={adicionarAoCarrinho} />
+            <CardProdutoHomeDeslogado key={produto.id} prod={produto} />
           ))}
         </div>
       </>
