@@ -28,9 +28,9 @@ function CardCarrinho({ produto }) {
 
                 <div className="rounded-lg md:w-2/3">
                     <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-                        <img src={produto.foto} alt="product-image" className="w-full rounded-lg sm:w-40" />
+                        <img src={produto.foto} alt="product-image" className="w-24 object-cover" />
                         <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-                            <div className="mt-5 sm:mt-0">
+                            <div className="mt-5 sm:mt-0 w-96">
                                 <h2 className="text-lg font-bold text-gray-900">{produto.nome}</h2>
                                 <p className="mt-1 text-xs text-gray-700">{produto.descricao}</p>
                             </div>
