@@ -35,7 +35,7 @@ function FormularioProduto() {
   const LimiteDescricao = 60;
 
   const atualizarDescricao = (e: ChangeEvent<HTMLInputElement>) => {
-    const novaDescricao = e.target.value.slice(0, LimiteDescricao); // Limita a descrição ao limite de caracteres
+    const novaDescricao = e.target.value.slice(0, LimiteDescricao);
     if (novaDescricao.length >= produto.descricao.length || novaDescricao.length === 0) {
       setProduto({ ...produto, descricao: novaDescricao });
     }
@@ -114,6 +114,7 @@ function FormularioProduto() {
   function retornar() {
     navigate('/produtos');
   }
+  
   function retornarPerfil() {
     navigate('/perfil');
   }
@@ -132,7 +133,6 @@ function FormularioProduto() {
         });
         toastAlerta('Produto atualizado com sucesso', 'sucesso');
         retornarPerfil();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (error: any) {
         if (error.toString().includes('403')) {
           toastAlerta('O token expirou, favor logar novamente', 'info')
@@ -149,9 +149,8 @@ function FormularioProduto() {
           },
         });
 
-        alert('Produto cadastrado com sucesso');
+        toastAlerta('Produto cadastrado com sucesso', 'sucesso');
         retornar();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (error: any) {
         if (error.toString().includes('403')) {
           toastAlerta('O token expirou, favor logar novamente', 'info')

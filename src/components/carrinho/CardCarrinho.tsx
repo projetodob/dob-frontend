@@ -15,7 +15,7 @@ function CardCarrinho({ produto }) {
         }
     };
 
-    const { carrinho, removerProdutoDoCarrinho } = useCarrinho();
+    const { removerProdutoDoCarrinho } = useCarrinho();
 
     const handleClickRemover = (produtoId) => {
         removerProdutoDoCarrinho(produtoId);
