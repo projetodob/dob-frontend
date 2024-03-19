@@ -1,17 +1,14 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import Produto from '../../../models/Produto';
 import { toastAlerta } from '../../../util/toastAlerta';
-import { CarrinhoContext } from '../../../contexts/CarrinhoContext';
 import CardProdutoHomeDeslogado from '../cardProdutos/CardProdutoHomeDeslogado';
+import { buscarDeslogado } from '../../../service/Service';
 
 function DeslogadoProdutos() {
 
  
-    const [produtos, setProdutos] = useState<Produto[]>([]);
-
-    const { adicionarProdutoAoCarrinho } = useContext(CarrinhoContext);
-  
+    const [produtos, setProdutos] = useState<Produto[]>([]);  
 
     async function buscarProdutos() {
       try {
