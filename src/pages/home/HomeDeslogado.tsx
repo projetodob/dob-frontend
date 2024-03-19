@@ -3,7 +3,6 @@ import "./HomeDeslogado.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import HomeDeslogadoPage2 from "./HomeDeslogadoPage2";
 import HomeDeslogadoPage3 from "./HomeDeslogadoPage3";
 import HomeDeslogadoPage1 from "./HomeDeslogadoPage1";
 
@@ -23,7 +22,6 @@ function HomeDeslogado() {
     <>
       <Slider {...settings}>
         <div><HomeDeslogadoPage1 /></div>
-        <div><HomeDeslogadoPage2 /></div>
         <div><HomeDeslogadoPage3 /></div>
       </Slider>
     </>
