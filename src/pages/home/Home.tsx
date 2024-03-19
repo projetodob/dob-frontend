@@ -1,37 +1,53 @@
 import "./Home.css";
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import InfosHome from "./InfosHome";
-import ListaProdutosHome from "../../components/produtos/listaProdutos/ListaProdutoHome";
+import dob from "../../assets/DOB.png";
 
 function Home() {
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 8000,
-    cssEase: "linear"
-  };
-
   return (
     <>
-
-      <Slider {...settings}>
-        <div>
-          <InfosHome />
+      <div className="mt-5 grid grid-cols-2 items-center justify-center">
+        <div className="ml-20 mx-auto text-center">
+          <div>
+            <h2 className="text-orange-500 text-2xl font-bold">
+              Comércio Justo!
+            </h2>
+            <p>
+              O "Desenvolvendo o Bem - DOB" é um projeto inovador voltado para a
+              erradicação da pobreza, alinhado ao Objetivo de Desenvolvimento
+              Sustentável 1 da ONU (ODS 1): Erradicação da Pobreza.
+            </p>
+          </div>
+          <br></br>
+          <div>
+            <h2 className="text-orange-600 text-2xl font-bold">
+              Oportunidades de Negócios!
+            </h2>
+            <p>
+              Queremos proporcionar oportunidades econômicas sustentáveis,
+              incentivando o empreendedorismo em comunidades carentes.
+            </p>
+          </div>
+          <br />
+          <div>
+            <h2 className="text-orange-700 text-2xl font-bold">
+              Sustentabilidade Econômica!
+            </h2>
+            <p>
+              Proporcionar uma fonte de renda sustentável para empreendedores
+              locais é a nossa missão.
+            </p>
+          </div>
         </div>
-        <div>
-          <ListaProdutosHome />
+        <div
+          className=" flex items-center
+                  justify-center"
+        >
+          <div className=" ">
+            <img src={dob} alt="" className="size-102 pr-0" />
+          </div>
         </div>
-      </Slider>
-
+      </div>
     </>
   );
-};
+}
 
 export default Home;

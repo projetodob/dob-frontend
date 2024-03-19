@@ -8,7 +8,7 @@ function Carrinho() {
 
     return (
         <div className="pt-6">
-            <h1 className="mb-5 ml-28 text-3xl font-medium text-laranja">CARRINHO</h1>
+            <h1 className="mb-5 ml-28 font-medium text-laranja text-4xl">CARRINHO</h1>
             {carrinho.map((produto) => (
                 <CardCarrinho key={produto.id} produto={produto} />
             ))}

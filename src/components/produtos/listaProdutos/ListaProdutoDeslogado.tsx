@@ -1,10 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
-import { buscar, buscarDeslogado} from '../../../service/Service';
-import CardProduto from '../cardProdutos/CardProdutos';
 import { toastAlerta } from '../../../util/toastAlerta';
 import { CarrinhoContext } from '../../../contexts/CarrinhoContext';
 import CardProdutoHomeDeslogado from '../cardProdutos/CardProdutoHomeDeslogado';

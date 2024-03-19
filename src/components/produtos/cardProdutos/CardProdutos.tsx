@@ -38,7 +38,7 @@ function CardProduto({ prod, adicionarAoCarrinho }: CardProdutosProps) {
         <div className="flex flex-col mt-auto">
         <p className="mb-2 text-3xl font-normal tracking-tight text-gray-900 dark:text-black">R$ {prod.preco}</p>
         <p className="mb-3 font-bold text-gray-900 dark:text-gray-400">{prod.categoria?.tipo}</p>
-        <button onClick={() => adicionarAoCarrinho(prod)} className='w-full inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800'>Comprar</button>
+        <button onClick={() => adicionarAoCarrinho(prod) } className='w-full inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800'>Comprar</button>
 
         </div>
       </div>
