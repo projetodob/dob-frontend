@@ -58,7 +58,7 @@ function ListaProdutoPerfil() {
         />
         </div>
       )}
-      <div className="h-screen w-full flex flex-col px-3 lg:px-10">
+      <div className="w-full flex flex-col px-3 lg:px-10">
         <div className="w-full flex justify-center items-center">
           <div className="grid grid-cols-5 gap-3 py-10">
             {produtos.map((produto) => (
