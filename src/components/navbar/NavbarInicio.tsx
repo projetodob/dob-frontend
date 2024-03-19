@@ -38,9 +38,9 @@ function NavbarInicio() {
 else
   {
     navbarComponent = (
-      <div className='w-full h-[4rem] bg-laranjaEsc shadow border-gray-200 dark:bg-white'>
+      <div className='w-full h-[4rem] bg-white shadow border-gray-200 dark:bg-white'>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to='/' className='hover:rounded-full px-1 py-1 text-2xl font-bold uppercase ml-10'>Desenvolvendo o Bem</Link>
+          <Link to='/' className='hover:rounded-full px-1 py-1 text-2xl text-orange-700 font-bold uppercase ml-10'>Desenvolvendo o Bem</Link>
 
         
             <a href="/sobre" className='py-2 px-2 hover:border-b-2 hover:border-green-500 hover:font-bold'>Quem somos</a>
