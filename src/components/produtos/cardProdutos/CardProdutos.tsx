@@ -14,13 +14,13 @@ function CardProduto({ prod, adicionarAoCarrinho }: CardProdutosProps) {
   };
 
   return (
-    <div className="max-w-sm  bg-white mb-7 rounded-lg shadow dark:bg-white dark:border-black-700 transition duration-300 ease-in-out transform hover:scale-105 hover:text-black-600 flex flex-col">
+    <div className="max-w-sm bg-white mb-7 rounded-lg shadow dark:bg-white dark:border-black-700 transition duration-300 ease-in-out transform hover:scale-105 hover:text-black-600 flex flex-col">
       <div className="flex w-full bg-laranja py-2 px-4 items-center gap-4">
         <img src={prod.usuario?.foto} className='w-12 h-12 rounded-full' alt="" />
         <h3 className='text-lg font-bold text-center uppercase'>{prod.usuario?.nome}</h3>
       </div>
       <a href="#">
-      <img className="w-full h-auto object-cover" src={prod.foto} alt="" />
+      <img className="w-full h-96 object-cover" src={prod.foto} alt="" />
       </a>
       <div className="p-5 flex flex-col justify-between" style={{ height: 'calc(100% - 180px)' }}>
         <div>

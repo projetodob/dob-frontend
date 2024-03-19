@@ -13,7 +13,7 @@ function CardProdutoPerfil({ prod, usuario }: CardProdutosProps) {
       <div className="mb-4">
         <div className="w-80">
           <div className="mr-10 ml-10 h-auto rounded-xl overflow-hidden bg-white shadow-md transition duration-500 ease-in-out transform flex flex-col">
-            <img className="w-full h-48 object-cover" src={prod.foto} alt="imagem do produto" />
+            <img className="w-full h-64 object-cover" src={prod.foto} alt="imagem do produto" />
             <div className='p-4 flex-grow'>
               <p className="mb-2 font-bold text-gray-900 dark:text-black-400">{prod.nome}</p>
               <p className="mb-2 font-normal text-gray-900 dark:text-gray-400 max-w-full break-all">{prod.descricao}</p>
