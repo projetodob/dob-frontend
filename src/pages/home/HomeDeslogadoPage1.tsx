@@ -1,5 +1,10 @@
 import "./Home.css";
 import "./HomeDeslogado.css";
+import dobsemfundo from "../../assets/dobsemfundo.png"
+import usericon from "./src/assets/usericon.png"
+import form from "./src/assets/formulario.png"
+import negocios from "./src/assets/negocios.png"
+import sustentabilidade from "./src/assets/sustentabilidade.png"
 
 function HomeDeslogadoPage1() {
   return (
@@ -32,7 +37,7 @@ function HomeDeslogadoPage1() {
           </div>
           <div className=" ">
             <img
-              src="./src/assets/dobsemfundo.png"
+              src={dobsemfundo}
               alt=""
               className="size-80 pr-0"
             />
@@ -51,7 +56,7 @@ function HomeDeslogadoPage1() {
                     <div className="">
                       <img
                         className="text-justify size-24 items-center justify-items-center"
-                        src="./src/assets/usericon.png"
+                        src={usericon}
                         alt=""
                       />
                     </div>
@@ -73,7 +78,7 @@ function HomeDeslogadoPage1() {
                   <div className="">
                     <img
                       className=" size-24 text-center items-center justify-items-center"
-                      src="./src/assets/formulario.png"
+                      src={form}
                       alt=""
                     />
                   </div>
@@ -95,7 +100,7 @@ function HomeDeslogadoPage1() {
                   <div className="">
                     <img
                       className="size-24 text-center items-center justify-items-center"
-                      src="./src/assets/negocios.png"
+                      src={negocios}
                       alt=""
                     />
                   </div>
@@ -117,7 +122,7 @@ function HomeDeslogadoPage1() {
                   <div className="">
                     <img
                       className="size-24 text-center items-center justify-items-center"
-                      src="./src/assets/sustentabilidade.png"
+                      src={sustentabilidade}
                       alt=""
                     />
                   </div>
