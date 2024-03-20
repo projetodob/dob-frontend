@@ -5,6 +5,7 @@ import usericon from "../../../src/assets/usericon.png"
 import form from "../../../src/assets/formulario.png"
 import negocios from "../../../src/assets/negocios.png"
 import sustentabilidade from "../../../src/assets/sustentabilidade.png"
+import { Link } from "react-router-dom";
 
 function HomeDeslogadoPage1() {
   return (
@@ -23,15 +24,14 @@ function HomeDeslogadoPage1() {
                 a sua jornada no mundo do empreendedorismo, anunciando os seus
                 produtos e serviços.
               </p>
-              <div className="mt-16 size-full  text-center ">
-                <a href="/cadastro">
-                  <button
-                    className="items-center justify-items-center m-auto rounded-xl text-2xl text-white font-medium bg-verdeEsc hover:bg-verdeMusgo w-60 h-80 md:w-1/3 h-1/2 py-2 h-full"
-                    type="submit"
-                  >
+              <div className="mt-16 size-full text-center">
+                <Link to="/cadastro">
+                  <button className="items-center justify-items-center m-auto rounded-xl text-2xl text-white font-medium bg-verdeEsc hover:bg-verdeMusgo w-60 h-80 md:w-1/3 h-1/2 py-2 h-full" type="submit">
                     Crie sua conta!
-                  </button>
-                </a>
+                    </button>
+                    </Link>
+                    </div>
+
               </div>
             </div>
           </div>
@@ -136,7 +136,6 @@ function HomeDeslogadoPage1() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
