@@ -77,9 +77,9 @@ function Cadastro() {
     <>
       <div className="font-sans fundoCadastro bg-cover bg-center bg-no-repeat flex flex-1 justify-center items-center">
         <form className='max-w-xl m-4 p-24 bg-white bg-opacity-25 rounded shadow-xl' onSubmit={cadastrarNovoUsuario}>
-          <h2 className='text-white text-center text-5xl font-bold '>Cadastrar</h2>
+          <h2 className='text-black text-center text-5xl font-bold '>Cadastrar</h2>
           <div className=" flex flex-col w-full">
-            <label className='mt-16 block font-medium text-lg text-white' htmlFor="nome">Nome</label>
+            <label className='mt-16 block font-medium text-lg text-black' htmlFor="nome">Nome</label>
             <input
               type="text"
               id="nome"
@@ -91,7 +91,7 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label className='mt-3 block font-medium text-lg text-white' htmlFor="email">Usuario</label>
+            <label className='mt-3 block font-medium text-lg text-black' htmlFor="email">Usuario</label>
             <input
               type="text"
               id="usuario"
@@ -103,7 +103,7 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label className='mt-3 block font-medium text-lg text-white' htmlFor="tipo">Tipo</label>
+            <label className='mt-3 block font-medium text-lg text-black' htmlFor="tipo">Tipo</label>
             <input
               type="text"
               id="tipo"
@@ -115,7 +115,7 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label className='mt-3 block font-medium text-lg text-white' htmlFor="foto">Foto</label>
+            <label className='mt-3 block font-medium text-lg text-black' htmlFor="foto">Foto</label>
             <input
               type="text"
               id="foto"
@@ -127,7 +127,7 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label className='mt-3 block font-medium text-lg text-white' htmlFor="senha">Senha</label>
+            <label className='mt-3 block font-medium text-lg text-black' htmlFor="senha">Senha</label>
             <input
               type="password"
               id="senha"
@@ -139,7 +139,7 @@ function Cadastro() {
             />
           </div>
           <div className=" flex flex-col w-full">
-            <label className='mt-3 block font-medium text-lg text-white' htmlFor="confirmarSenha">Confirmar Senha</label>
+            <label className='mt-3 block font-medium text-lg text-black' htmlFor="confirmarSenha">Confirmar Senha</label>
             <input
               type="password"
               id="confirmarSenha"
