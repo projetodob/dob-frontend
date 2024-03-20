@@ -55,13 +55,13 @@ function Contato() {
               <h2 className="text-xl font-medium text-gray-700">Gustavo Almeida</h2>
               <span className="block mb-5"></span>
               <div className="flex justify-center">
-                <a href="https://github.com/gustavokarl">
+                <a href="https://github.com/gkalmeida">
                   <GithubLogo
                     size={45}
                     weight='light'
                   />
                 </a>
-                <a href="https://www.linkedin.com/in/gustavokarl/">
+                <a href="https://www.linkedin.com/in/gkalmeida/">
                   <LinkedinLogo
                     size={45}
                     weight='light'
