@@ -30,8 +30,6 @@ function HomeDeslogadoPage1() {
                     Crie sua conta!
                     </button>
                     </Link>
-                    </div>
-
               </div>
             </div>
           </div>
@@ -136,6 +134,7 @@ function HomeDeslogadoPage1() {
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 }
