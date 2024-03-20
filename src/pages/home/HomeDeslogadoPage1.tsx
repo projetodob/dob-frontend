@@ -37,7 +37,7 @@ function HomeDeslogadoPage1() {
             <img
               src={dobsemfundo}
               alt=""
-              className="size-80 pr-0"
+              className="size-70 pr-0"
             />
           </div>
         </div>
@@ -45,7 +45,7 @@ function HomeDeslogadoPage1() {
         <div className="px-10 py-10 grid bg-gradient-to-b from-orange-500 to-orange-800 items-center justify-items-center overflow-hidden  bg-orange-700">
           <div className="flex gap-10 flex-wrap items-centers text-center">
             <div className="  w-full h-80 md:w-60  rounded shadow-lg hover:bg-orange-800  ">
-              <a href="/login">
+              <Link to="/login">
                 <div className="grid grid-rows-4 py-4 h-full ">
                   <div className="font-bold text-center text-2xl mb-2">
                     Entre na sua Conta
@@ -65,7 +65,7 @@ function HomeDeslogadoPage1() {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className=" w-full h-80 md:w-60 rounded shadow-lg   ">
               <div className="grid grid-rows-4 py-4 h-full w-full">
