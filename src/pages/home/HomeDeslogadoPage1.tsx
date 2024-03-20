@@ -1,10 +1,10 @@
 import "./Home.css";
 import "./HomeDeslogado.css";
 import dobsemfundo from "../../assets/dobsemfundo.png"
-import usericon from "./src/assets/usericon.png"
-import form from "./src/assets/formulario.png"
-import negocios from "./src/assets/negocios.png"
-import sustentabilidade from "./src/assets/sustentabilidade.png"
+import usericon from "../../../src/assets/usericon.png"
+import form from "../../../src/assets/formulario.png"
+import negocios from "../../../src/assets/negocios.png"
+import sustentabilidade from "../../../src/assets/sustentabilidade.png"
 
 function HomeDeslogadoPage1() {
   return (
